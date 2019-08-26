@@ -1,7 +1,7 @@
 let common = [
-  "features/**/*.feature",
+  "tests/features/**/*.feature",
   "--require-module ts-node/register",
-  "--require step-definitions/**/*.ts",
+  "--require tests/step-definitions/**/*.ts",
   "--format progress-bar",
   "--format node_modules/cucumber-pretty"
 ].join(" ");

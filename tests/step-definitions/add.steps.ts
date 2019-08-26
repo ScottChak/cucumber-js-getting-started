@@ -1,4 +1,4 @@
-import { ICalculator, Calculator } from "../lib/calculator";
+import { ICalculator, Calculator } from "../../lib/calculator";
 
 import { binding, given, then, when } from "cucumber-tsflow";
 import { expect } from "chai";
