@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "baseUrl": "src"
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
