@@ -1,4 +1,4 @@
-import { ICalculator } from "./icalculator";
+import { ICalculator } from "./i-calculator";
 
 export class Calculator implements ICalculator {
   Add(a: number, b: number): number {

@@ -1,2 +1,2 @@
-export { ICalculator } from "./icalculator";
+export { ICalculator } from "./i-calculator";
 export { Calculator } from "./calculator";
