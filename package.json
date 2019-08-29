@@ -13,19 +13,25 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "./node_modules/.bin/cucumber-js -p default && mocha tests/integration-tests/**/*.tests.ts -r ts-node/register --reporter spec --exit"
+    "unit-test-alone": "./node_modules/.bin/cucumber-js -p default",
+    "unit-test": "npm run build && npm run unit-test-alone",
+    "integration-test-alone": "mocha tests/integration-tests/**/*.tests.ts -r ts-node/register --reporter spec --exit",
+    "integration-test": "npm run build && npm run integration-test-alone",
+    "test": "npm run build && npm run unit-test-alone && npm run integration-test-alone"
   },
   "dependencies": {},
   "devDependencies": {
     "@types/chai": "^4.2.0",
     "@types/cucumber": "^4.0.7",
     "@types/mocha": "^5.2.7",
+    "@types/nock": "^10.0.3",
     "@types/node": "^12.7.2",
     "chai": "^4.2.0",
     "cucumber": "^5.1.0",
     "cucumber-pretty": "^1.5.2",
     "cucumber-tsflow": "^3.2.0",
     "mocha": "^6.2.0",
+    "nock": "^10.0.6",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
   }

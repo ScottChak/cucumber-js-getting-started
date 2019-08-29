@@ -1,4 +1,4 @@
-import { ICalculator, Calculator } from "../../../lib/calculator";
+import { ICalculator, Calculator } from "../../../../lib/calculator";
 
 import { binding, given, then, when } from "cucumber-tsflow";
 import { expect } from "chai";
@@ -14,17 +14,17 @@ export class SubstractSteps {
   }
 
   @given(/The source is set to (-?\d*)/)
-  public GivenTheSourceIsSetTo(a: string) {
+  public GivenTheSourceIsSetTo(a: string): void {
     this._source = Number(a);
   }
 
   @when(/The user substracts (-?\d*)/)
-  public WhenTheUserSubstracts(b: string) {
+  public WhenTheUserSubstracts(b: string): void {
     this._result = this._sut.Substract(this._source, Number(b));
   }
 
   @then(/The result should be (-?\d*)/)
-  public ThenTheResultShoudBe(expectedResult: string) {
+  public ThenTheResultShoudBe(expectedResult: string): void {
     expect(this._result).to.equal(Number(expectedResult));
   }
 }
